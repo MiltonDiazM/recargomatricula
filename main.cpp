@@ -6,6 +6,28 @@
 //a 20 años, el recargo es del 6%
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int edad;
+double recargo=0, costoMatricula=0;
+
+cout<<"\nIngresa la edad: ";
+cin>>edad;
+cout<<"\nIngrese el costo de la matrícula: ";
+cin>>costoMatricula;
+
+if (edad <5)
+recargo=0;
+else if(edad<=10)
+recargo=0.01;
+else if (edad<=15)  // (edad>10 && edad<=15)
+recargo=0.02;
+else if (edad<=20)
+recargo=0.04;
+else
+recargo=0.06;
+double rec = costoMatricula * recargo;
+double valorpagar= costoMatricula + rec;
+
+cout<<"\nTu edad es de "<<edad <<" años, tu recago es: "<< rec;
+cout<<"\n Debes pagar en total "<< valorpagar;
+return 0;
 }
